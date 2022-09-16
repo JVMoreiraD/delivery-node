@@ -39,4 +39,6 @@ model Deliverys {
   end_at         DateTime    @default(now())
   clientsId      String
   deliverymanId  String
+
+  @@map("deliveries")
 }
