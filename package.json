@@ -4,13 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts"
+    "dev": "ts-node-dev --exit-child --transpile-only --ignore-watch node_modules src/server.ts",
+    "prisma:migrate": "yarn prisma migrate dev",
+    "prisma:client": "yarn prisma studio"
   },
   "dependencies": {
     "@prisma/client": "^4.3.1",
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.2",
     "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
     "jsonwebtoken": "^8.5.1",
     "prisma": "^4.3.1",
     "typescript": "^4.8.3"
